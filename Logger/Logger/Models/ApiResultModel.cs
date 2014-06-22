@@ -13,7 +13,7 @@ namespace Logger.Models
 
     public class ApiModel
     {
-        public Guid userId { get; set; }
+        public int userId { get; set; }
         public string dateTime { get; set; }
         public string location { get; set; }
         public string page { get; set; }

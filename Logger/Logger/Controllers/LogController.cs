@@ -25,7 +25,7 @@ namespace Logger.Controllers
                         result = log.result
                     };
                     db.logs.Add(newLog);
-                    db.SaveChangesAsync();
+                    db.SaveChanges();
                 }
             }
             catch (Exception e)
