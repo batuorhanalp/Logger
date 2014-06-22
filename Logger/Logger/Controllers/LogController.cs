@@ -49,7 +49,7 @@ namespace Logger.Controllers
             return new ApiResultModel
             {
                 Succeed = true,
-                Reason = "
+                Reason = ""
             };
         }
     }
