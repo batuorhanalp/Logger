@@ -10,12 +10,12 @@
             <PropertyRef Name="logId" />
           </Key>
           <Property Name="logId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="userId" Type="int" Nullable="false" />
+          <Property Name="userId" Type="nvarchar" MaxLength="255" Nullable="false" />
           <Property Name="actionDate" Type="datetime" Nullable="false" />
-          <Property Name="location" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="page" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="action" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="result" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="location" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="page" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="action" Type="nvarchar" MaxLength="255" Nullable="false" />
+          <Property Name="result" Type="nvarchar" MaxLength="255" Nullable="false" />
         </EntityType>
         <EntityContainer Name="loggerModelStoreContainer">
           <EntitySet Name="logs" EntityType="Self.logs" Schema="dbo" store:Type="Tables" />
@@ -32,12 +32,12 @@
             <PropertyRef Name="logId" />
           </Key>
           <Property Name="logId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="userId" Type="Int32" Nullable="false" />
+          <Property Name="userId" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="actionDate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="location" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="page" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="action" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="result" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="location" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="page" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="action" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="result" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>

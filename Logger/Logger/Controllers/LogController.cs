@@ -8,21 +8,26 @@ namespace Logger.Controllers
     public class LogController : ApiController
     {
         // POST api/log
-        public ApiResultModel Post(List<ApiModel> logs)
+        public ApiResultModel Post(ApiInputModel logs)
         {
             try
             {
                 var db = new loggerEntities();
-                foreach (var log in logs)
+                foreach (var log in logs.logs)
                 {
+                    var dtRegisterDate = DateTime.Now;
+                    if (log.dateTime != null)
+                    {
+                        dtRegisterDate = Convert.ToDateTime(log.dateTime);
+                    }
                     var newLog = new log
                     {
-                        userId = log.userId,
-                        actionDate = Convert.ToDateTime(log.dateTime),
-                        location = log.location,
-                        page = log.page,
-                        action = log.action,
-                        result = log.result
+                        userId = log.userId ?? "",
+                        actionDate = dtRegisterDate,
+                        location = log.location ?? "",
+                        page = log.page ?? "",
+                        action = log.action ?? "",
+                        result = log.result ?? ""
                     };
                     db.logs.Add(newLog);
                     db.SaveChanges();
