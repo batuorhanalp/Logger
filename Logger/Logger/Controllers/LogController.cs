@@ -39,7 +39,7 @@ namespace Logger.Controllers
                     var dtRegisterDate = DateTime.Now;
                     if (log.dateTime != null)
                     {
-                        dtRegisterDate = Convert.ToDateTime(log.dateTime);
+                        dtRegisterDate = DateTime.ParseExact(log.dateTime, "dd.MM.yyyy HH:mm:ss", null);
                     }
                     var newLog = new log
                     {
