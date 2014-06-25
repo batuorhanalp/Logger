@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Web.Http;
 using Logger.Models;
 
@@ -7,6 +8,26 @@ namespace Logger.Controllers
 {
     public class LogController : ApiController
     {
+        public List<ApiModel> Get()
+        {
+            var db = new loggerEntities();
+            var logs = db.logs.ToList();
+            var li = new List<ApiModel>();
+            foreach (var log in logs)
+            {
+                li.Add(new ApiModel
+                {
+                    action = log.action,
+                    dateTime = log.actionDate.ToLongDateString(),
+                    location = log.location,
+                    page = log.page,
+                    result = log.result,
+                    userId = log.userId
+                });
+            }
+            return li;
+        }
+
         // POST api/log
         public ApiResultModel Post(List<ApiModel> logs)
         {

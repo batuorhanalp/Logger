@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\BatuEv\Documents\GitHub\Logger\Logger\Logger\Models\db.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\Batu\Documents\GitHub\Logger\Logger\Logger\Models\db.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.
