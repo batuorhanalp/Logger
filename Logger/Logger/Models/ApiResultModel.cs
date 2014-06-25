@@ -11,9 +11,14 @@ namespace Logger.Models
         public string Reason { get; set; }
     }
 
+    public class ApiInputModel
+    {
+        public List<ApiModel> logs { get; set; } 
+    }
+
     public class ApiModel
     {
-        public int userId { get; set; }
+        public string userId { get; set; }
         public string dateTime { get; set; }
         public string location { get; set; }
         public string page { get; set; }

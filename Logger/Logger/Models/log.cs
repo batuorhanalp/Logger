@@ -15,7 +15,7 @@ namespace Logger.Models
     public partial class log
     {
         public int logId { get; set; }
-        public int userId { get; set; }
+        public string userId { get; set; }
         public System.DateTime actionDate { get; set; }
         public string location { get; set; }
         public string page { get; set; }
